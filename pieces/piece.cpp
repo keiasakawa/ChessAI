@@ -1,14 +1,32 @@
 #include "piece.hpp"
 
-int Piece::getColor() {
+Piece::Piece(int color, tuple<int, int> pos)
+{
+    pos = pos;
+    color = color;
+}
+
+int Piece::getColor()
+{
     return color;
 }
 
-string Piece::getPieceType() {
+string Piece::getPieceType()
+{
     return pieceType;
 }
 
-Piece::~Piece() {
-    delete color;
-    delete pieceType;
+tuple<int, int> Piece::getPos()
+{
+    return pos;
+}
+
+void Piece::setPos(tuple<int, int> pos)
+{
+    pos = pos;
+}
+
+void Piece::setColor(int color)
+{
+    color = color;
 }

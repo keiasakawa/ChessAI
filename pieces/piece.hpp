@@ -1,24 +1,33 @@
 #ifndef PIECE_H
 #define PIECE_H
 #include <string>
+#include <vector>
+#include <tuple>
 using namespace std;
 
-class Piece {
-    public:
+class Piece
+{
+public:
+    // Constructor
+    Piece(int color, tuple<int, int> pos);
 
-        virtual vector<tuple<int, int>> getPossibleMoves(vector<Piece> board) = 0;
+    // Get All The Piece's Possible Moves
+    virtual vector<tuple<int, int>> getPossibleMoves(vector<Piece> board) = 0;
 
-        int getColor();
+    int getColor();
 
-        string getPieceType();
+    string getPieceType();
 
-        virtual ~Piece();
+    tuple<int, int> getPos();
 
+    void setColor(int color);
 
-    protected:
-        int color;
-        string pieceType;
+    void setPos(tuple<int, int>);
 
-}
+protected:
+    int color;
+    string pieceType;
+    tuple<int, int> pos;
+};
 
 #endif
