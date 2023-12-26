@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <tuple>
+#include "../move.hpp"
 using namespace std;
 
 class Piece
@@ -12,7 +13,7 @@ public:
     Piece(int color, tuple<int, int> pos);
 
     // Get All The Piece's Possible Moves
-    virtual vector<tuple<int, int>> getPossibleMoves(vector<Piece> board) = 0;
+    virtual vector<Move *> getPossibleMoves(vector<vector<Piece *>> board) = 0;
 
     int getColor();
 
@@ -25,6 +26,7 @@ public:
     void setPos(tuple<int, int>);
 
 protected:
+    // 0 == BLACK, 1 == WHITE
     int color;
     string pieceType;
     tuple<int, int> pos;

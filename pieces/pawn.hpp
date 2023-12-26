@@ -8,7 +8,7 @@ using namespace std;
 class Pawn : public Piece
 {
     // Get All The Piece's Possible Moves
-    vector<tuple<int, int>> getPossibleMoves(vector<Piece> board);
+    vector<Move *> getPossibleMoves(vector<vector<Piece *>> board);
 };
 
 #endif
