@@ -1,4 +1,5 @@
 #include "pawn.hpp"
+#include "piece.hpp"
 
 vector<Move *> Pawn::getPossibleMoves(vector<vector<Piece *>> board)
 {

@@ -1,9 +1,11 @@
 #include "piece.hpp"
+#include <tuple>
 
-Piece::Piece(int color, tuple<int, int> pos)
+Piece::Piece(int col, tuple<int, int> pos)
 {
+    cout << "called" << endl;
     pos = pos;
-    color = color;
+    color = col;
 }
 
 int Piece::getColor()
@@ -11,22 +13,17 @@ int Piece::getColor()
     return color;
 }
 
-string Piece::getPieceType()
-{
-    return pieceType;
-}
-
 tuple<int, int> Piece::getPos()
 {
     return pos;
 }
 
-void Piece::setPos(tuple<int, int> pos)
+void Piece::setPos(tuple<int, int> p)
 {
-    pos = pos;
+    pos = p;
 }
 
-void Piece::setColor(int color)
+void Piece::setColor(int col)
 {
-    color = color;
+    color = col;
 }
