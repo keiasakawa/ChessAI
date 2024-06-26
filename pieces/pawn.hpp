@@ -10,7 +10,7 @@ class Pawn : public Piece
 public:
     using Piece::Piece;
     // Get All The Piece's Possible Moves
-    vector<Move *> getPossibleMoves();
+    // vector<Move *> getPossibleMoves();
 };
 
 #endif

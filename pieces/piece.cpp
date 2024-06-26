@@ -3,7 +3,6 @@
 
 Piece::Piece(int col, tuple<int, int> pos)
 {
-    cout << "called" << endl;
     pos = pos;
     color = col;
 }

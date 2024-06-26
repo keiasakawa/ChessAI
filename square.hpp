@@ -9,10 +9,10 @@ public:
     bool isEmpty();
     Piece *getPiece();
     void clear();
-    void setPiece();
+    void setPiece(Piece* newPiece);
 
 private:
-    Piece *piece;
+    Piece* piece;
 };
 
-#endif;
+#endif

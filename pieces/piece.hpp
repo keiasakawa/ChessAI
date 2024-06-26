@@ -4,7 +4,7 @@
 #include <vector>
 #include <tuple>
 #include <iostream>
-#include "../move.hpp"
+// #include "../move.hpp"
 using namespace std;
 
 class Piece
@@ -14,7 +14,7 @@ public:
     Piece(int col, tuple<int, int> pos);
 
     // Get All The Piece's Possible Moves
-    vector<Move *> getPossibleMoves();
+    // vector<Move *> getPossibleMoves();
 
     int getColor();
 
